@@ -12,3 +12,5 @@ It's base on  https://github.com/chromium/chromium/tree/123.0.6312.121
 
 
 
+If you want to run the project, you need to download the dependencies to the specified directory in the release. Then run him again. 
+[download native dependencies](https://github.com/webdev-support/chrome_content_shell/releases/tag/0.0.1)
