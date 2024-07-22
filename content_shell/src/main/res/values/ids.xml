@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    content/public/android/java/res/values/ 开始-->
+    <!-- Selection Menu Group IDs -->
+    <item name="select_action_menu_assist_items" type="id" />
+    <item name="select_action_menu_default_items" type="id" />
+    <item name="select_action_menu_text_processing_items" type="id" />
+
+    <!-- Selection Menu Items -->
+    <item name="select_action_menu_cut" type="id" />
+    <item name="select_action_menu_copy" type="id" />
+    <item name="select_action_menu_paste" type="id" />
+    <item name="select_action_menu_share" type="id" />
+    <item name="select_action_menu_select_all" type="id" />
+    <item name="select_action_menu_paste_as_plain_text" type="id" />
+    <item name="select_action_menu_web_search" type="id" />
+    <!--    content/public/android/java/res/values/ 开始-->
+
+
+    <!--    ui/android/java/res/values 开始-->
+    <!-- Dropdown Popup Window -->
+    <item name="dropdown_popup_window" type="id" />
+
+    <!-- Model Utils -->
+    <item name="view_model" type="id" />
+    <item name="view_type" type="id" />
+    <item name="view_mcp" type="id" />
+
+    <!-- Widgets -->
+    <item name="chip_cancel_btn" type="id" />
+    <!--    ui/android/java/res/values 结束-->
+
+    <!--    components/browser_ui/widget/android/java/res/values/ids.xml 开始-->
+    <!-- DualControlLayout button ids -->
+    <item name="button_primary" type="id" />
+    <item name="button_secondary" type="id" />
+
+    <!-- ViewHighlighter tags -->
+    <item name="highlight_state" type="id" />
+    <!--    components/browser_ui/widget/android/java/res/values/ids.xml 结束-->
+
+
+    <!--    components/browser_ui/settings/android/java/res/values/ids.xml 开始-->
+    <item name="managed_disclaimer_text" type="id" />
+    <!-- Menu items IDs in Settings -->
+    <item name="menu_id_general_help" type="id" />
+    <item name="menu_id_targeted_help" type="id" />
+    <!--    components/browser_ui/settings/android/java/res/values/ids.xml 结束-->
+
+
+    <!--    chrome/browser/ui/android/toolbar/java/res/values/ids.xml  开始-->
+
+    <!-- Tab Actions -->
+    <item name="close_tab" type="id" />
+    <item name="ungroup_tab" type="id" />
+    <item name="edit_group_name" type="id" />
+    <item name="select_tabs" type="id" />
+
+    <!-- Menu IDs -->
+    <item name="customize_adaptive_button_menu_id" type="id" />
+    <item name="icon_row_menu_id" type="id" />
+    <item name="incognito_tab_menu_id" type="id" />
+    <item name="new_tab_menu_id" type="id" />
+    <item name="new_incognito_tab_menu_id" type="id" />
+
+    <!--    chrome/browser/ui/android/toolbar/java/res/values/ids.xml  开始-->
+
+
+    <!--    chrome/android/features/start_surface/java/res/values/ids.xml 开始-->
+    <item name="primary_tasks_surface_view" type="id" />
+    <item name="secondary_tasks_surface_view" type="id" />
+    <item name="start_surface_explore_view" type="id" />
+    <!--    chrome/android/features/start_surface/java/res/values/ids.xml 结束-->
+
+
+</resources>

@@ -1,0 +1,149 @@
+apply plugin: 'com.android.library'
+apply from: "../common.gradle"
+android {
+    namespace 'com.example.chromium_content_view'
+    compileSdk 34
+    defaultConfig {
+        buildConfigField("boolean", "ENABLE_ASSERTS", "true")
+        buildConfigField("boolean", "IS_UBSAN", "false")
+        buildConfigField("boolean", "BUNDLES_SUPPORTED", "false")
+        buildConfigField("boolean", "IS_INCREMENTAL_INSTALL", "false")
+        buildConfigField("boolean", "IS_CHROME_BRANDED", "false")
+        buildConfigField("int", "R_STRING_PRODUCT_VERSION", "-1")
+        buildConfigField("boolean", "WRITE_CLANG_PROFILING_DATA", "false")
+        buildConfigField("boolean", "ISOLATED_SPLITS_ENABLED", "false")
+        buildConfigField("boolean", "IS_FOR_TEST", "false")
+        buildConfigField("String", "build_version", "\"123.0.6312.121\"")
+        minSdk 24
+        targetSdk 34
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+        resourceConfigurations = ['en', 'zh', "zh-rCN"]
+        versionName "123.0.1"
+        versionCode 100
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+        buildConfig = true
+    }
+    aaptOptions {
+        noCompress "dat", "bin", "pak"
+    }
+    packagingOptions {
+        resources {
+            exclude("META-INF/DEPENDENCIES")>
+            exclude("META-INF/LICENSE")
+            exclude("META-INF/LICENSE.txt")
+            exclude("META-INF/license.txt")
+            exclude("META-INF/NOTICE")
+            exclude("META-INF/NOTICE.txt")
+            exclude("META-INF/notice.txt")
+            exclude("META-INF/ASL2.0")
+            exclude("META-INF/*.kotlin_module")
+            exclude("META-INF/INDEX.LIST")
+            exclude("META-INF/io.netty.versions.properties")
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ["*.aar", "*.jar"], dir: 'libs')
+    implementation fileTree(include: ["*.aar", "*.jar"], dir: '../libs')
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.google.errorprone:error_prone_annotations:2.25.0'
+    implementation 'com.google.guava:guava:33.0.0-jre'
+    implementation 'com.google.protobuf:protobuf-java:3.25.3'
+    implementation 'org.ccil.cowan.tagsoup:tagsoup:1.2.1'
+    implementation "androidx.asynclayoutinflater:asynclayoutinflater:1.0.0"
+    implementation "androidx.privacysandbox.ads:ads-adservices:1.1.0-beta04"
+    implementation "androidx.privacysandbox.ads:ads-adservices-java:1.1.0-beta04"
+    implementation "com.google.android.material:material:1.11.0"
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation "androidx.constraintlayout:constraintlayout:2.1.4"
+    implementation 'androidx.constraintlayout:constraintlayout-core:1.0.4'
+    testImplementation 'androidx.test:core:1.5.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'androidx.test:runner:1.4.0'
+    testImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+
+    testImplementation "androidx.test:core:1.5.0"
+    testImplementation "androidx.test:core-ktx:1.5.0"
+    testImplementation "androidx.test.espresso:espresso-core:3.5.1"
+    testImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    testImplementation "androidx.test.ext:junit:1.1.5"
+    testImplementation "androidx.test.ext:junit-ktx:1.1.5"
+    testImplementation "androidx.test.ext:truth:1.5.0"
+    testImplementation "androidx.test:runner:1.5.2"
+    androidTestUtil "androidx.test:orchestrator:1.4.2"
+
+
+    implementation "androidx.window:window:1.3.0-beta01"
+    implementation 'androidx.window:window-java:1.3.0-beta01'
+    implementation "androidx.window.extensions.core:core:1.0.0"
+    implementation 'androidx.interpolator:interpolator:1.0.0'
+    implementation "com.google.android.material:material:1.11.0"
+    implementation "androidx.window.extensions.core:core:1.0.0"
+
+
+
+    String baseGmsVersion = '18.0.1'
+    String gcmGmsVersion = '17.0.0'
+    String castGmsVersion = '17.0.0'
+    implementation "com.google.android.gms:play-services-basement:${baseGmsVersion}"
+    implementation "com.google.android.gms:play-services-tasks:${baseGmsVersion}"
+    implementation "com.google.android.gms:play-services-base:${baseGmsVersion}"
+    implementation 'com.google.android.gms:play-services-auth-base:18.0.2'
+    implementation "com.google.android.gms:play-services-auth-api-phone:${baseGmsVersion}"
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation "com.google.android.gms:play-services-cast:${castGmsVersion}"
+    implementation "com.google.android.gms:play-services-cast-framework:${castGmsVersion}"
+    implementation "com.google.android.gms:play-services-iid:${gcmGmsVersion}"
+    implementation "com.google.android.gms:play-services-instantapps:${baseGmsVersion}"
+    implementation "com.google.android.gms:play-services-gcm:${gcmGmsVersion}"
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.android.gms:play-services-vision-common:19.1.3'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    implementation 'com.google.android.gms:play-services-tflite-java:16.0.1'
+
+
+    // The following two dependencies are miscellaneous and can be completely removed
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
+}

@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        google()
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        mavenLocal()
+        mavenLocal {
+            url "$rootDir/.m2"
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath 'com.tencent.bugly:symtabfileuploader:2.2.1'
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:6.21.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"
+    }
+}
+
+/*plugins {
+    id 'com.google.devtools.ksp' version '1.9.0-1.0.12' apply false
+}*/
+
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        mavenLocal()
+        mavenLocal {
+            url "$rootDir/.m2"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+tasks.withType(Wrapper) {
+    enabled = false
+}
+
+task copyHooks(type: Copy) {
+    from("hooks") {
+        include "**"
+    }
+    into ".git/hooks"
+}
+
+task setPreCommitExecutable(type: Exec) {
+    commandLine 'chmod', '+x', '.git/hooks/pre-commit'
+}
+

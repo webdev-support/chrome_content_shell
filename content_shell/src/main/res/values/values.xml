@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright 2020 The Chromium Authors
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file.
+-->
+
+<resources>
+    <!-- Bottom navigation bar styling. -->
+    <bool name="window_light_navigation_bar">true</bool>
+
+    <!-- Status bar icon styling. -->
+    <bool name="window_light_status_bar">true</bool>
+
+
+    <!-- Drag shadow resize ratio -->
+    <item name="drag_shadow_resize_ratio" format="float" type="dimen">0.6</item>
+    <item name="drag_shadow_max_size_to_window_ratio" format="float" type="dimen">0.35</item>
+
+    <!-- Menu Animation Constants -->
+    <item name="menu_animation_pivot_x" format="fraction" type="fraction">95%</item>
+    <item name="menu_start_animation_pivot_x" format="fraction" type="fraction">5%</item>
+
+
+    <!--    components/browser_ui/widget/android/java/res/values/values.xml 开始-->
+    <!-- Drag-Reorderable List Item -->
+    <!-- Used for 90% = 230/255 alpha -->
+    <integer name="list_item_dragged_alpha">230</integer>
+
+    <!-- Modern List Item -->
+    <integer name="list_item_level_default">0</integer>
+    <integer name="list_item_level_selected">1</integer>
+    <integer name="list_item_level_incognito">2</integer>
+    <!--    components/browser_ui/widget/android/java/res/values/values.xml 结束-->
+
+
+    <!--    chrome/browser/ui/android/toolbar/java/res/values/values.xml 开始-->
+
+    <integer name="reload_button_level_reload">0</integer>
+    <integer name="reload_button_level_stop">1</integer>
+
+    <!--    chrome/browser/ui/android/toolbar/java/res/values/values.xml 开始-->
+
+</resources>

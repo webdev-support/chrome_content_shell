@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Surface tint -->
+    <color name="gm3_baseline_surface_tint">@color/gm3_baseline_surface_tint_light</color>
+
+    <!-- Text colors -->
+    <color name="default_primary_color">#F2F2F2</color>
+    <color name="input_underline_error_color">#D32F2F</color>
+    <color name="explanation_text_color">#909090</color>
+
+    <!-- Toolbar colors -->
+    <!-- Same as ?attr/colorSurface. -->
+    <color name="toolbar_background_primary_dark">@color/default_bg_color_dark</color>
+
+    <!-- Infobar colors -->
+    <color name="infobar_icon_drawable_color">@color/default_icon_color_accent1_tint_list</color>
+
+    <!-- Control colors for toggles, checkboxes, ratio buttons, list item highlight, and accent.
+     Note that these should NOT be used for icon tint. -->
+    <color name="control_highlight_color">
+        @color/default_control_color_highlight_light
+    </color>
+
+    <!-- Favicons -->
+    <color name="default_favicon_background_color">@color/default_control_color_normal_light</color>
+
+    <!-- Navigation bar colors -->
+    <macro name="bottom_system_nav_color">@macro/toolbar_background_primary</macro>
+    <macro name="bottom_system_nav_divider_color">@macro/divider_line_bg_color</macro>
+    <color name="bottom_system_nav_divider_color_light">@color/divider_line_bg_color_light</color>
+
+    <!-- This is the color that will appear on the system recents UI. It is a neutral background
+         color that adapts to dark/light modes but not a dynamic color. -->
+    <color name="default_task_description_color">@color/default_bg_color_baseline</color>
+
+    <!-- Progress Bar colors -->
+    <macro name="progress_bar_foreground">@macro/default_control_color_active</macro>
+    <color name="progress_bar_secondary">@color/modern_grey_600</color>
+
+    <!-- Chip Colors -->
+    <macro name="default_chip_assistive_text_color_secondary">@macro/default_text_color_secondary
+    </macro>
+
+    <!-- Clank Empty States Colors-->
+    <color name="empty_state_icon_bg_color">@color/material_primary_95</color>
+    <color name="empty_state_icon_bg_background_color">@color/material_primary_95</color>
+    <color name="empty_state_icon_bg_foreground_color">@color/material_primary_90</color>
+    <color name="empty_state_icon_color">@color/material_primary_40</color>
+    <color name="empty_state_icon_tabswitcher_bg_color">@color/material_primary_95</color>
+
+    <!-- Please see src/ui/android/java/res/values/colors.xml for the shared common colors. -->
+
+    <!-- Omnibox Suggestion colors -->
+    <macro name="suggestion_url_color">@macro/default_text_color_link</macro>
+    <color name="suggestion_url_color_incognito">@color/default_text_color_link_light</color>
+    <color name="answers_description_text_negative">@color/default_red</color>
+    <color name="answers_description_text_positive">@color/default_green</color>
+
+    <!-- LocationBar colors -->
+    <color name="locationbar_dark_hint_text">@color/default_text_color_secondary_list</color>
+    <color name="locationbar_light_hint_text">@color/default_text_color_secondary_light</color>
+
+    <color name="locationbar_status_offline_color_dark">@color/default_text_color_secondary_dark
+    </color>
+    <color name="locationbar_status_offline_color_light">@android:color/white</color>
+    <color name="locationbar_status_offline_color_incognito">
+        @color/default_text_color_secondary_light
+    </color>
+
+    <color name="locationbar_status_preview_color_dark">@color/default_text_color_secondary_dark
+    </color>
+    <color name="locationbar_status_preview_color_light">@android:color/white</color>
+    <color name="locationbar_status_preview_color_incognito">@color/modern_blue_300</color>
+
+    <color name="locationbar_status_separator_color_dark">@color/baseline_neutral_variant_50</color>
+    <color name="locationbar_status_separator_color_light">@color/white_alpha_60</color>
+    <color name="locationbar_status_separator_color_incognito">@color/baseline_neutral_variant_60
+    </color>
+
+    <color name="omnibox_focused_fading_background_color">@color/black_alpha_65</color>
+    <color name="omnibox_focused_fading_background_color_light">@color/white_alpha_65</color>
+
+    <color name="branded_url_text_on_dark_bg">@color/baseline_neutral_100</color>
+    <color name="branded_url_text_on_light_bg">@color/default_text_color_dark</color>
+    <color name="branded_url_text_variant_on_dark_bg">@color/white_alpha_50</color>
+    <color name="branded_url_text_variant_on_light_bg">@color/default_text_color_secondary_dark
+    </color>
+
+    <color name="url_bar_primary_text_incognito">@color/default_text_color_light</color>
+    <color name="url_bar_secondary_text_incognito">@color/default_text_color_secondary_light</color>
+
+    <color name="text_highlight_color_incognito">@color/baseline_primary_80_alpha_20</color>
+
+    <color name="omnibox_suggestion_bg_incognito">@color/default_bg_color_dark</color>
+    <color name="omnibox_dropdown_bg_incognito">@color/default_bg_color_dark_elev_3_baseline</color>
+
+
+    <!--    /src/components/browser_ui/widget/android/java/res/values 开始 -->
+    <color name="modal_dialog_scrim_color">@color/black_alpha_65</color>
+    <color name="toolbar_shadow_color">@color/black_alpha_11</color>
+    <color name="toolbar_text_box_background">@color/omnibox_bg_color</color>
+    <macro name="search_box_hint" tools:ignore="UnusedResources">
+        @macro/default_text_color_secondary
+    </macro>
+    <macro name="search_box_hint_polish_neutral" tools:ignore="UnusedResources">
+        @macro/default_text_color
+    </macro>
+    <macro name="search_box_hint_polish_colorful" tools:ignore="UnusedResources">
+        @macro/default_text_color_on_accent1_container
+    </macro>
+    <color name="search_box_hint_baseline">@color/default_text_color_secondary_baseline</color>
+
+    <!-- Chip Colors -->
+    <color name="default_chip_assistive_text_color">@color/default_text_color_baseline</color>
+    <color name="default_chip_ripple_color">@color/default_bg_color_elev_2_baseline</color>
+    <!-- Same as ?attr/colorSecondaryContainer -->
+    <color name="chip_bg_selected_color_light">@color/baseline_secondary_90</color>
+    <color name="chip_bg_selected_color_dark">@color/baseline_secondary_30</color>
+    <color name="chip_bg_selected_color_baseline" tools:ignore="UnusedResources">
+        @color/chip_bg_selected_color_light
+    </color>
+    <!-- Same as ?attr/colorOnSurfaceVariant -->
+    <color name="chip_state_layer_color_dark">@color/baseline_neutral_variant_30</color>
+    <color name="chip_state_layer_color_light">@color/baseline_neutral_variant_80</color>
+    <color name="chip_state_layer_color_baseline" tools:ignore="UnusedResources">
+        @color/chip_state_layer_color_dark
+    </color>
+    <!-- Same as ?attr/colorOnSecondaryContainer -->
+    <color name="chip_state_layer_selected_color_dark">@color/baseline_secondary_10</color>
+    <color name="chip_state_layer_selected_color_light">@color/baseline_secondary_90</color>
+    <color name="chip_state_layer_selected_color_baseline" tools:ignore="UnusedResources">
+        @color/chip_state_layer_selected_color_dark
+    </color>
+    <!-- Same as ?attr/colorOutline. -->
+    <color name="default_chip_outline_color_light">@color/baseline_neutral_variant_60</color>
+    <color name="default_chip_outline_color_dark">@color/baseline_neutral_variant_50</color>
+    <color name="default_chip_outline_color" tools:ignore="UnusedResources">
+        @color/default_chip_outline_color_dark
+    </color>
+    <!-- Same as ?attr/colorOnSurface -->
+    <color name="chip_outline_focused_color_dark">@color/baseline_neutral_10</color>
+    <color name="chip_outline_focused_color_light">@color/baseline_neutral_90</color>
+    <color name="chip_outline_focused_color_baseline" tools:ignore="UnusedResources">
+        @color/chip_outline_focused_color_dark
+    </color>
+
+    <color name="menu_chip_background_color_dark">@color/modern_blue_600_alpha_6</color>
+    <color name="menu_chip_background_color_light">@color/modern_blue_300_alpha_10</color>
+    <color name="menu_chip_background_color">@color/menu_chip_background_color_dark</color>
+    <color name="menu_chip_background_color_disabled_dark">@color/modern_grey_100_alpha_38</color>
+    <color name="menu_chip_background_color_disabled_light">@color/white_alpha_6</color>
+    <color name="menu_chip_background_color_disabled">
+        @color/menu_chip_background_color_disabled_dark
+    </color>
+    <color name="menu_footer_chip_background_color_dark">@color/modern_blue_600_alpha_10</color>
+    <color name="menu_footer_chip_background_color_light">@color/modern_blue_300_alpha_10</color>
+    <color name="menu_footer_chip_background_color_disabled_dark">@color/modern_grey_100</color>
+    <color name="menu_footer_chip_background_color_disabled_light">@color/white_alpha_6</color>
+    <!--    /src/components/browser_ui/widget/android/java/res/values 结束 -->
+
+
+    <!--components/browser_ui/theme/android/java/res/values/color.xml 开始 -->
+    <color name="splash_screen_bg">@color/system_neutral1_10</color>
+    <!--components/browser_ui/theme/android/java/res/values/color.xml 结束 -->
+
+    <!--    chrome/android/java/res/values/colors.xml 开始-->
+    <!-- Please see src/ui/android/java/res/values/colors.xml for the shared common colors. -->
+
+    <!--  TODO(crbug.com/775198): move all hex color values to color_palette.xml  -->
+    <!-- Other colors -->
+    <color name="dark_action_bar_color">@color/google_blue_grey_900</color>
+    <color name="dark_status_bar_color">#161E21</color>
+
+    <!-- App menu colors -->
+    <color name="update_menu_item_text_color">@color/default_red</color>
+
+    <!--  Distilled Page Prefs colors -->
+    <color name="distilled_page_prefs_selected">#999999</color>
+
+    <!-- Compositor Tab Title Colors -->
+    <color name="compositor_tab_title_bar_text">@color/default_text_color_list</color>
+    <color name="compositor_tab_title_bar_text_incognito">@android:color/white</color>
+
+    <!-- Account Signin Colors -->
+    <!-- As in dimens.xml, signin uses values from the First Run Experience -->
+    <macro name="signin_head_background">@macro/default_bg_color</macro>
+    <macro name="signin_body_background">@macro/default_bg_color</macro>
+    <color name="signin_header_animation_background">@color/modern_grey_50</color>
+    <color name="signin_header_animation_line_light">#E8E9EB</color>
+    <color name="signin_header_animation_line_dark">#BDC0C5</color>
+    <color name="signin_header_animation_laptop_screen">#F4F4F4</color>
+
+    <!-- NTP and Home sheet colors. Also used on the bookmarks and recent tabs pages. -->
+    <color name="ntp_bg_incognito">@color/default_bg_color_dark</color>
+
+    <!-- Incognito NTP Colors. -->
+    <color name="incognito_emphasis">@android:color/white</color>
+
+    <!-- Overlay Panel colors -->
+    <macro name="overlay_panel_bar_background_color">@macro/default_bg_color</macro>
+
+    <!-- Find in Page colors -->
+    <color name="find_in_page_query_white_color">@android:color/white</color>
+    <color name="find_in_page_query_incognito_hint_color">@color/white_alpha_70</color>
+    <color name="find_in_page_failed_results_status_color">@color/default_red</color>
+    <color name="find_in_page_query_default_hint_color">@color/default_text_color_secondary_list
+    </color>
+    <color name="find_in_page_background_color">@color/default_bg_color_baseline</color>
+
+    <!-- App Background Colors -->
+    <color name="window_background_color">@color/default_bg_color_baseline</color>
+
+    <!-- Bookmark widget colors -->
+    <color name="bookmark_widget_pressed_highlight">@color/black_alpha_11</color>
+    <color name="bookmark_widget_background">@color/default_bg_color_baseline</color>
+
+    <!-- History Navigation UI colors -->
+    <color name="navigation_bubble_arrow">@android:color/black</color>
+
+    <!-- Scrollbar colors -->
+    <color name="default_scroll_thumb">@color/modern_grey_800_alpha_38</color>
+
+    <!-- Offline indicator v2 colors -->
+    <color name="offline_indicator_offline_color">@android:color/black</color>
+
+    <!-- Model selector button background TSR colors -->
+    <color name="model_selector_button_bg_color">@color/default_icon_color_inverse_dark</color>
+
+    <!-- Tab strip button hover background color -->
+    <color name="tab_strip_button_hover_bg_color">@color/baseline_neutral_90</color>
+
+    <!-- Other colors -->
+    <color name="media_viewer_bg">#000000</color>
+    <color name="image_viewer_bg">#0E0E0E</color>
+    <color name="thumbnail_placeholder_on_primary_bg" tools:ignore="UnusedResources">
+        @color/default_bg_color_secondary
+    </color>
+    <macro name="tab_layout_selected_tab_color">@macro/default_text_color_accent1</macro>
+    <!--    chrome/android/java/res/values/colors.xml 结束-->
+
+
+    <!--    components/payments/content/android/minimal_java_res/values/colors.xml 开始-->
+
+    <color name="google_pay_icon_color">@color/modern_grey_700</color>
+
+    <!--    components/payments/content/android/minimal_java_res/values/colors.xml 结束-->
+
+</resources>

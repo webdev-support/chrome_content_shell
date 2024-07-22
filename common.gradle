@@ -1,0 +1,23 @@
+apply plugin: 'com.diffplug.spotless'
+spotless {
+    java {
+        target 'src/*/java/**/*.java'
+        googleJavaFormat()
+    }
+    kotlin {
+        target 'src/*/java/**/*.kt'
+        ktfmt()
+    }
+    kotlinGradle {
+        target 'src/*/java/**/*.kt'
+        ktfmt()
+    }
+
+    format 'misc', {
+        target '**/*.gradle', '**/*.md', '**/.gitignore'
+    }
+    format 'xml', {
+        target '**/*.xml'
+    }
+}
+
